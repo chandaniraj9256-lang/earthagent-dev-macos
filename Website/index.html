@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EarthAgent Dev | Agentic AI Desktop Assistant for macOS</title>
+  <meta name="description" content="EarthAgent Dev is an agentic AI desktop assistant for macOS with voice chat, safe computer-use automation, AI provider setup, and a floating Earth companion.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#05070b">
+  <link rel="canonical" href="https://earthagent-dev.pages.dev/">
+  <link rel="icon" type="image/png" sizes="512x512" href="./assets/earthagent-dev-icon-512.png">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EarthAgent Dev">
+  <meta property="og:title" content="EarthAgent Dev | Agentic AI Desktop Assistant for macOS">
+  <meta property="og:description" content="A voice-first AI agent for Mac that helps users talk, plan, and safely control desktop tasks with clear confirmations.">
+  <meta property="og:url" content="https://earthagent-dev.pages.dev/">
+  <meta property="og:image" content="https://earthagent-dev.pages.dev/assets/earthagent-dev-icon-1024.png">
+  <meta property="og:image:alt" content="EarthAgent Dev logo with a glowing Earth, orbit lines, and an AI cursor.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EarthAgent Dev | Agentic AI Desktop Assistant for macOS">
+  <meta name="twitter:description" content="Voice chat, agentic task planning, safe computer-use automation, and flexible AI provider setup for Mac.">
+  <meta name="twitter:image" content="https://earthagent-dev.pages.dev/assets/earthagent-dev-icon-1024.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <canvas id="earth-scene" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="EarthAgent Dev home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>EarthAgent Dev</span>
+    </a>
+    <a class="topbar-download" href="./downloads/Earth-Agent-macOS.dmg" download>Download for Mac</a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Agentic AI assistant for macOS</p>
+        <h1 id="hero-title">EarthAgent Dev</h1>
+        <p class="hero-lede">
+          A voice-first AI agent for Mac that lets you type, talk, plan tasks, and safely guide your computer through AI-powered actions.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="./downloads/Earth-Agent-macOS.dmg" download>
+            <span class="download-glyph" aria-hidden="true"></span>
+            Download Mac Installer
+          </a>
+        </div>
+        <p class="installer-note">For macOS. Open the installer, move EarthAgent Dev to Applications, then launch it like a normal Mac app.</p>
+      </div>
+
+      <div class="hero-console" aria-label="EarthAgent Dev live assistant preview">
+        <div class="console-orbit">
+          <span class="console-earth" aria-hidden="true"></span>
+          <div>
+            <strong>Ready to listen</strong>
+            <span>Click the Earth icon or start voice mode.</span>
+          </div>
+        </div>
+        <div class="message-preview">
+          <span>Earth</span>
+          <p>I can explain my agent plan, ask before sensitive computer-use actions, and stop immediately when you take over.</p>
+        </div>
+        <div class="command-pill">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Ask EarthAgent Dev anything...</span>
+          <span class="mic-glyph" aria-hidden="true"></span>
+          <span class="voice-glyph" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="scene-caption" aria-hidden="true">
+        <span>Voice</span>
+        <span>Agentic AI</span>
+        <span>Computer use</span>
+        <span>Control</span>
+      </div>
+    </section>
+
+    <section class="seo-section" aria-labelledby="seo-title">
+      <div class="section-heading compact">
+        <p class="eyebrow">AI agent for Mac</p>
+        <h2 id="seo-title">Voice chat, agentic planning, and safe Mac automation.</h2>
+        <p>
+          EarthAgent Dev is built for people searching for a practical AI desktop agent: a macOS assistant that can listen, respond,
+          break goals into steps, and help with computer-use tasks while keeping the user in control.
+        </p>
+      </div>
+
+      <div class="keyword-grid" aria-label="EarthAgent Dev capabilities">
+        <article>
+          <h3>Agentic AI assistant</h3>
+          <p>Plan multi-step goals, explain progress, use subagents, and pause for confirmation before sensitive actions.</p>
+        </article>
+        <article>
+          <h3>Voice AI for macOS</h3>
+          <p>Talk naturally with microphone input, text chat, conversation mode, and voice replies from supported providers.</p>
+        </article>
+        <article>
+          <h3>Computer-use automation</h3>
+          <p>Open apps, launch websites, inspect visible UI with permission, and show task progress with a visual assistant cursor.</p>
+        </article>
+        <article>
+          <h3>Flexible model providers</h3>
+          <p>Connect AI providers and OpenAI-compatible APIs, including models from OpenAI, Anthropic Claude, Gemini, Groq, NVIDIA, and local servers.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="install" class="install-section" aria-labelledby="install-title">
+      <div class="section-heading">
+        <p class="eyebrow">Install</p>
+        <h2 id="install-title">One Mac installer. No extra files.</h2>
+        <p>
+          The public download is a Mac installer package for EarthAgent Dev. Users download it, install the app, then finish setup inside EarthAgent Dev.
+        </p>
+      </div>
+
+      <div class="installer-card">
+        <div class="installer-meta">
+          <span class="installer-icon" aria-hidden="true"></span>
+          <div>
+            <strong>EarthAgent Dev for macOS</strong>
+            <span>Mac installer</span>
+          </div>
+        </div>
+        <a class="button primary installer-button" href="./downloads/Earth-Agent-macOS.dmg" download>
+          <span class="download-glyph" aria-hidden="true"></span>
+          Download for Mac
+        </a>
+      </div>
+    </section>
+
+    <section class="steps-section" aria-labelledby="steps-title">
+      <div class="section-heading compact">
+        <p class="eyebrow">Launch</p>
+        <h2 id="steps-title">Start in three simple steps.</h2>
+      </div>
+
+      <div class="steps">
+        <article>
+          <span>01</span>
+          <h3>Download</h3>
+          <p>Click the Mac installer button and open the downloaded EarthAgent Dev installer.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Install</h3>
+          <p>Move EarthAgent Dev into Applications when macOS asks, then open it from Launchpad or Applications.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Connect</h3>
+          <p>Add your AI provider key, choose a model, enable microphone permission, and start talking to Earth.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="trust-section" aria-labelledby="trust-title">
+      <div class="section-heading compact">
+        <p class="eyebrow">Safety</p>
+        <h2 id="trust-title">Built so the user stays in control.</h2>
+      </div>
+
+      <div class="trust-grid">
+        <article>
+          <h3>Emergency stop</h3>
+          <p>Stop speech, voice mode, and active tasks immediately.</p>
+        </article>
+        <article>
+          <h3>Clear confirmations</h3>
+          <p>Posting, sending, deleting, purchases, and account changes require final approval.</p>
+        </article>
+        <article>
+          <h3>Permission aware</h3>
+          <p>Earth asks for microphone, speech, and Accessibility access only when needed.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" aria-labelledby="faq-title">
+      <div class="section-heading compact">
+        <p class="eyebrow">Questions</p>
+        <h2 id="faq-title">Built for modern AI agent workflows.</h2>
+      </div>
+
+      <div class="faq-grid">
+        <article>
+          <h3>Is EarthAgent Dev an agentic AI app?</h3>
+          <p>Yes. EarthAgent Dev is designed around agentic planning, routines, subagents, tool use, MCP connector foundations, and safe confirmation before sensitive Mac actions.</p>
+        </article>
+        <article>
+          <h3>Can I use Claude or other AI models?</h3>
+          <p>EarthAgent Dev supports flexible provider setup, including OpenAI-compatible APIs and providers such as Anthropic Claude, Gemini, Groq, NVIDIA, OpenAI, and local models.</p>
+        </article>
+        <article>
+          <h3>Is it like Hermes Agent?</h3>
+          <p>EarthAgent Dev is not affiliated with Hermes Agent, but it follows a similar modern agent direction: skills, routines, subagents, connectors, and computer-use workflows for real tasks.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://earthagent-dev.pages.dev/#organization",
+          "name": "EarthAgent Dev",
+          "url": "https://earthagent-dev.pages.dev/",
+          "logo": "https://earthagent-dev.pages.dev/assets/earthagent-dev-icon-1024.png"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://earthagent-dev.pages.dev/#website",
+          "url": "https://earthagent-dev.pages.dev/",
+          "name": "EarthAgent Dev",
+          "publisher": {
+            "@id": "https://earthagent-dev.pages.dev/#organization"
+          },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://earthagent-dev.pages.dev/#software",
+          "name": "EarthAgent Dev",
+          "alternateName": "Earth Agent",
+          "applicationCategory": "ProductivityApplication",
+          "operatingSystem": "macOS",
+          "softwareVersion": "0.1.0",
+          "description": "EarthAgent Dev is an agentic AI desktop assistant for macOS with voice chat, safe computer-use automation, AI provider setup, and a floating Earth companion.",
+          "image": "https://earthagent-dev.pages.dev/assets/earthagent-dev-icon-1024.png",
+          "url": "https://earthagent-dev.pages.dev/",
+          "downloadUrl": "https://earthagent-dev.pages.dev/downloads/Earth-Agent-macOS.dmg",
+          "installUrl": "https://earthagent-dev.pages.dev/downloads/Earth-Agent-macOS.dmg",
+          "publisher": {
+            "@id": "https://earthagent-dev.pages.dev/#organization"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Agentic AI task planning",
+            "Voice-first AI conversation",
+            "macOS computer-use automation",
+            "Safe confirmations for sensitive actions",
+            "Flexible AI provider and model setup",
+            "OpenAI-compatible API support",
+            "Claude, Gemini, Groq, NVIDIA, and local model provider configuration"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://earthagent-dev.pages.dev/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is EarthAgent Dev an agentic AI app?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. EarthAgent Dev is designed around agentic planning, routines, subagents, tool use, MCP connector foundations, and safe confirmation before sensitive Mac actions."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is EarthAgent Dev?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "EarthAgent Dev is a macOS AI desktop assistant with voice chat, agentic task planning, safe computer-use automation, and a floating Earth companion."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does EarthAgent Dev support Claude and other AI providers?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "EarthAgent Dev is designed for flexible provider setup, including OpenAI-compatible APIs and providers such as Anthropic Claude, Gemini, Groq, NVIDIA, and local models where users provide their own API keys."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is EarthAgent Dev like Hermes Agent?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "EarthAgent Dev is not affiliated with Hermes Agent, but it follows a similar modern agent direction with skills, routines, subagents, connectors, and computer-use workflows for real tasks."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can EarthAgent Dev control my Mac?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "EarthAgent Dev is built for permission-aware Mac automation. Sensitive actions such as posting, sending messages, purchases, account changes, and deleting files require user confirmation."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

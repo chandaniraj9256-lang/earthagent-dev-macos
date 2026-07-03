@@ -1,0 +1,21 @@
+{
+  "name": "EarthAgent Dev",
+  "short_name": "EarthAgent",
+  "description": "Agentic AI desktop assistant for macOS with voice chat and safe computer-use automation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05070b",
+  "theme_color": "#05070b",
+  "icons": [
+    {
+      "src": "/assets/earthagent-dev-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/earthagent-dev-icon-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}

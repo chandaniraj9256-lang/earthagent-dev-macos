@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDisplayName</key>
+    <string>Earth Agent</string>
+    <key>CFBundleExecutable</key>
+    <string>EarthAgent</string>
+    <key>CFBundleIconFile</key>
+    <string>EarthAgent</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.earthagent.desktop</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>Earth Agent</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>0.1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>LSApplicationCategoryType</key>
+    <string>public.app-category.productivity</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>13.0</string>
+    <key>NSAppleEventsUsageDescription</key>
+    <string>Earth Agent may use safe macOS automation only after you ask it to perform a task.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Earth Agent uses the microphone when you press Talk so it can turn your voice into text.</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>Earth Agent uses speech recognition only when you start voice input.</string>
+    <key>NSScreenCaptureUsageDescription</key>
+    <string>Earth Agent captures the screen only when you ask it to look at your screen or press the screen capture button.</string>
+</dict>
+</plist>
