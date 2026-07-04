@@ -1,10 +1,67 @@
 # Earth Agent
 
-Earth Agent is a macOS SwiftUI foundation for a voice-first AI desktop assistant. It creates a small animated floating Earth icon near your cursor. Single-clicking the icon opens a compact assistant window; double-clicking opens it and starts live listening. The app includes chat, voice controls, global shortcuts, provider settings, file/photo upload, screen capture, task planning, safety controls, routines, a 30-agent swarm system, memory, logs, social connector setup, and a visual AI cursor foundation.
+**Earth Agent is an open-source macOS AI companion that floats on your desktop, listens by voice, plans tasks, and helps control your Mac with safe confirmations.**
 
-Earth Agent is open source under the MIT License. The goal is to build a practical, safe, voice-first AI assistant for macOS in public, with room for contributors to improve providers, voice, automation, safety, UI polish, and agent skills.
+It is built in Swift and SwiftUI as a real macOS app foundation: a small animated Earth orb follows near your cursor, opens a compact command minibar on click, starts live voice conversation on double-click, and expands into a full assistant workspace for chat, tasks, agents, memory, settings, safety, and logs.
 
-This is the first production-grade foundation, not the final autonomous computer-control product. It is designed so the next versions can add deeper Accessibility-driven UI reading, controlled clicking, memory, tool plugins, and signed app packaging without rewriting the core.
+![Earth Agent launch preview](Website/assets/earthagent-launch-preview.png)
+
+## Why It Exists
+
+Most AI apps live in a browser tab. Earth Agent is designed to feel native to the Mac: always nearby, voice-first, visually clear, and careful about user control.
+
+The long-term vision is a safe desktop agent that can:
+
+- Talk naturally with the user.
+- Explain what it is doing.
+- Break larger goals into steps.
+- Ask before sensitive actions.
+- Show progress with a visual second cursor.
+- Use local memory only with permission.
+- Connect to tools, providers, and workflows without hiding what is happening.
+
+This repo is the first production-grade foundation, not a finished autonomous computer-control product. The architecture is intentionally modular so contributors can improve providers, voice, automation, safety, UI polish, and agent skills without rewriting the core.
+
+## Quick Start
+
+Requirements:
+
+- macOS 13 or newer.
+- Xcode Command Line Tools or Xcode.
+- An API key from an OpenAI-compatible provider.
+
+Run from source:
+
+```bash
+git clone https://github.com/chandaniraj9256-lang/earthagent-dev-macos.git
+cd earthagent-dev-macos
+swift build
+swift run EarthAgent
+```
+
+Build and install as a Mac app:
+
+```bash
+./Scripts/install_app.sh
+open "/Applications/Earth Agent.app"
+```
+
+When Earth starts, you should see a small animated Earth icon near your cursor. Single-click it to open the minibar, double-click it to start live listening, or press `Control+Option+Space` from anywhere to talk/stop.
+
+## Public Beta Status
+
+Earth Agent is useful today as a local AI assistant foundation, but it is still early beta software. It can chat, speak, listen, plan, open apps/websites, inspect visible UI with permission, use safe confirmation flows, and store provider keys in Keychain. It is not yet notarized, auto-updated, or ready for unsupervised high-risk actions.
+
+Good first use cases:
+
+- Floating desktop AI chat.
+- Voice conversation with your selected model.
+- File/photo/screen explanation.
+- Drafting and local notes.
+- Safe app/website opening.
+- Local website generation.
+- Task planning with transparent logs.
+- Testing provider, voice, agent, and connector foundations.
 
 ## What Works Now
 
@@ -84,28 +141,20 @@ This is the first production-grade foundation, not the final autonomous computer
 
 Those are product layers. The current project creates the architecture and safety boundaries first.
 
-## Requirements
+## Development Setup
 
-- macOS 13 or newer.
-- Xcode Command Line Tools or Xcode installed.
-- An API key from an OpenAI-compatible provider.
-
-Check Swift:
+Check Swift before building:
 
 ```bash
 swift --version
 ```
 
-## Run The App
-
-From this folder:
+Run from an existing checkout:
 
 ```bash
 swift build
 swift run EarthAgent
 ```
-
-When it starts, you should see a small animated Earth icon following near your cursor. Single-click it to open the minibar, double-click it to start live listening, or press `Control+Option+Space` from anywhere to talk/stop.
 
 To stop the app from Terminal, press:
 
@@ -579,17 +628,31 @@ Important files:
 - `Windows/CursorOverlayWindowController.swift`: visual AI cursor overlay.
 - `Views/ChatPanelView.swift`: full assistant window with Chat, Tasks, Agents, Memory, Settings, Safety, and Logs tabs.
 
-## Screenshots
+## Screenshots And Demo Assets
 
-Screenshots should be added before public launch:
+The repo includes launch-ready visuals under `Website/assets/`:
 
-- Floating Earth orb near cursor.
-- Minibar with text, mic, and live conversation controls.
-- Chat tab with onboarding and quick skills.
-- Tasks tab with risk/plan/timeline.
-- Agents tab with routines, 30-agent swarm, connectors, and computer-use status.
-- Settings tab with provider and voice setup.
-- Safety tab with control level and permissions.
+![Earth Agent website hero](Website/assets/earthagent-website-hero.png)
+
+- `Website/assets/earthagent-launch-preview.png`: product launch preview.
+- `Website/assets/earthagent-website-hero.png`: website hero image.
+- `Website/assets/earthagent-github-social.png`: GitHub/social preview image.
+- `Website/video/earthagent-launch-video/`: HyperFrames source for the launch video.
+
+To preview the video source locally:
+
+```bash
+cd Website/video/earthagent-launch-video
+npx --yes hyperframes@0.7.31 preview --port 3017
+```
+
+Then open:
+
+```text
+http://localhost:3017/#project/earthagent-launch-video
+```
+
+To render an MP4, install FFmpeg first, then run the HyperFrames render command from the video project. FFmpeg is required for final video export.
 
 ## Build Verification
 
@@ -627,21 +690,22 @@ open "/Applications/Earth Agent.app"
 
 ## Roadmap
 
-1. Convert the Swift Package into a signed Xcode `.app` target using the included `Packaging` plist and entitlements.
-2. Add notarization, auto-updates, and a proper DMG installer.
-3. Add a formal tool registry around current services.
-4. Add deeper browser automation with visual element overlays.
-5. Add screen OCR with a privacy-first Screen Recording permission flow.
-6. Add live provider-specific model/voice catalog refresh for more providers.
-7. Add local encrypted memory storage.
-8. Add tests for planner routing, provider request encoding, memory filtering, and safety confirmation rules.
-9. Add real MCP execution with per-tool permissions after connector safety UX is mature.
-10. Add screenshots, product website, support docs, and beta onboarding.
+See [ROADMAP.md](ROADMAP.md) for the public build plan.
 
+The highest-impact next layers are:
+
+1. Signed and notarized app packaging with a clean DMG installer.
+2. Better voice latency, interruption handling, and provider choice.
+3. Stronger screen understanding with OCR and privacy-first permission UX.
+4. Safer computer-use execution with visible overlays and confirmation checkpoints.
+5. Real connector execution for MCP, Slack, Telegram, WhatsApp, Discord, and Email.
+6. More tests around safety routing, provider requests, memory filtering, and automation.
 
 ## Contributing
 
-Contributions are welcome. Good first areas:
+Contributions are welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Good first areas:
 
 - Provider model catalogs and connection tests.
 - Voice provider integrations.
