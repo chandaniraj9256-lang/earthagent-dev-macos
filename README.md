@@ -2,6 +2,8 @@
 
 Earth Agent is a macOS SwiftUI foundation for a voice-first AI desktop assistant. It creates a small animated floating Earth icon near your cursor. Single-clicking the icon opens a compact assistant window; double-clicking opens it and starts live listening. The app includes chat, voice controls, global shortcuts, provider settings, file/photo upload, screen capture, task planning, safety controls, routines, a 30-agent swarm system, memory, logs, social connector setup, and a visual AI cursor foundation.
 
+Earth Agent is open source under the MIT License. The goal is to build a practical, safe, voice-first AI assistant for macOS in public, with room for contributors to improve providers, voice, automation, safety, UI polish, and agent skills.
+
 This is the first production-grade foundation, not the final autonomous computer-control product. It is designed so the next versions can add deeper Accessibility-driven UI reading, controlled clicking, memory, tool plugins, and signed app packaging without rewriting the core.
 
 ## What Works Now
@@ -635,3 +637,20 @@ open "/Applications/Earth Agent.app"
 8. Add tests for planner routing, provider request encoding, memory filtering, and safety confirmation rules.
 9. Add real MCP execution with per-tool permissions after connector safety UX is mature.
 10. Add screenshots, product website, support docs, and beta onboarding.
+
+
+## Contributing
+
+Contributions are welcome. Good first areas:
+
+- Provider model catalogs and connection tests.
+- Voice provider integrations.
+- SwiftUI polish and accessibility.
+- Safer automation tools with clear confirmation steps.
+- Tests for planning, safety, memory, and provider behavior.
+
+Please keep secrets out of commits. API keys belong in macOS Keychain or local environment variables, never in source files.
+
+## License
+
+Earth Agent is released under the MIT License. See [LICENSE](LICENSE).
